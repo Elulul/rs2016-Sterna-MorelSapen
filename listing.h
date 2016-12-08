@@ -18,3 +18,6 @@ struct mastruct{
 	char pad[12];
 };
 
+
+extern void lecture(int fd ,int sizealire);
+extern void listing(char * doc);
