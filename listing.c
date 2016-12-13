@@ -26,9 +26,6 @@ void lecture(int fd ,int sizealire){
 
 		}
 	}
-	
-
-
 
 void listing(char * doc){
 
@@ -44,8 +41,6 @@ int p ;
 while(finDeFichier2(fd)!=1){
 	lseek(fd,-512,SEEK_CUR);
 	p =read(fd,&s, 512);
-
-
 	int mode = atoi (s.mode);
 	int flag = atoi(s.typeflag);
 	int uid = OtoD(atoi(s.uid));
@@ -53,28 +48,15 @@ while(finDeFichier2(fd)!=1){
 	int size = OtoD(atoi(s.size)); 	
 	permission(mode,flag);
 	printf(" %d/%d ",uid,gid);
-	printf(" %d ",size);
+	printf("%d ",size);
 	long int date = atol(s.mtime);
 	long int dated = OctalToDecimal(date);
 	conversiondate(dated);
 	printf(" %s\n",s.name );
-
-	
-	
-	
-
 	sizetoread = aread(size);
-
 	cpttest ++;
 	lecture(fd,sizetoread);
-	
-
 	}
-
-
-
-
-
 	close (fd);
 
 }

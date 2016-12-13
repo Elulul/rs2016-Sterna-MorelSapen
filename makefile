@@ -1,5 +1,5 @@
-ptar : main.o conversion.o listing.o fctFinFichier.o optionx.o date.o permission.o
-		gcc -o ptar main.o conversion.o listing.o fctFinFichier.o optionx.o date.o permission.o
+ptar : main.o conversion.o listing.o fctFinFichier.o optionx.o date.o permission.o listingbasique.o
+		gcc -o ptar main.o conversion.o listing.o fctFinFichier.o optionx.o date.o permission.o listingbasique.o
 
 optionx.o : optionx.c
 		gcc -c optionx.c
@@ -21,3 +21,6 @@ conversion.o : conversion.c
 
 permission.o : permission.c
 		gcc -c permission.c
+
+listingbasique.o : listingbasique.c
+		gcc -c listingbasique.c
