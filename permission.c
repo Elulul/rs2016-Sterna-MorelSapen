@@ -28,7 +28,9 @@ void  permission(int mode,int flag){
 		res[0] = 'd';
 	}
 	
-
+	if(flag == 2){
+		res[0] = 'l';
+	}
 
 
 

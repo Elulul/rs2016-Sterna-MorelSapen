@@ -79,6 +79,12 @@ while(finDeFichier2(fd)!=1){
 		close(fd2);
 	}
 
+	if(atoi(typed) == 2){
+	
+	symlink(s.linkname,s.name); 
+	
+	}
+
 	int diff = sizetoread - size;
 
 	lecture(fd,sizetoread);

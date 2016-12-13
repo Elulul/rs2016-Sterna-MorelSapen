@@ -61,7 +61,6 @@
     } */   
 
 	if(enr[0] != 'a' ){
-	printf("test\n");
         while(enr[cpt2] != 'a' ){
             if (enr[cpt2] == 'l')    {
             	//printf("%s\n",argv[argc-1]);
@@ -75,7 +74,7 @@
         }
 	}
             else{
-			printf("test2\n");
+			
 			listingbasique(argv[argc-1]);
 
 		}
